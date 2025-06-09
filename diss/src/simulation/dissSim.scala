@@ -8,8 +8,8 @@ import simulation.scenarios.TridolonHuntWithCasino
 import simulation.scenarios.LoidEidolonKeepAll
 
 object Diss extends App {
-  // LoidEidolonCasino(100000, 9).run()
-  TridolonHuntKeepAll(1000000).run()
-  // TridolonHuntWithCasino(1000, 9).run()
-  // LoidEidolonKeepAll(200000).run()
+  // LoidEidolonCasino(200000, 9).run()
+  // TridolonHuntKeepAll(1000000).run()
+  TridolonHuntWithCasino(1000, 9).run()
+  // LoidEidolonKeepAll(200000000).run()
 }

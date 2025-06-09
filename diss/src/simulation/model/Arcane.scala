@@ -4,7 +4,7 @@ final case class Arcane(
       name: String,
       platValue: Int,
       vosforValue: Int,
-      dissolutionChance: Double
+      dropChance: Double
   ) {
     override def toString() = this.name
   }

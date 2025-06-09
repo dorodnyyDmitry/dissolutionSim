@@ -17,16 +17,19 @@ final case class DropEvent(
     }
   }
 
+  // get total weight bc official drop tables arent 100% xdd
+  val totalWeight: Int = (pool.map(_.dropChance).sum*10000).toInt
+
   // get weights
   val accumulatedWeights: List[Int] =
-    helper(pool.map(a => (a.dissolutionChance * 10000).toInt))
+    helper(pool.map(a => (a.dropChance * 10000).toInt))
 
   // attach weights to arcanes
   val weightedPool = TreeMap(accumulatedWeights.zip(pool): _*)
 
   // get arcane from correct bucket
   def getRandom: Arcane = {
-    val rand = Random.nextInt(10000)
+    val rand = Random.nextInt(totalWeight)
     weightedPool.dropWhile(_._1 <= rand).head._2
   }
 

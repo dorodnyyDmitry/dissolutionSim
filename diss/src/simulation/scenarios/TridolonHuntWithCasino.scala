@@ -15,7 +15,8 @@ case class TridolonHuntWithCasino(numHunts: Int, platThreshold: Int)
     extends Scenario
     with CasinoScenario {
   override def run(): Unit = {
-    showOccs(countOccs(casinoLoot))
+    showOccs(countOccs(totalLoot))
+    println(s"final profit: ${totalLoot.map(_.platValue).sum}")
   }
 
   val events: List[DropEvent] = List(

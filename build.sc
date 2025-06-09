@@ -13,6 +13,8 @@ object diss extends ScalaModule {
       ivy"org.typelevel::cats-effect:3.5.7",
       ivy"tf.tofu::tofu-core-ce3:0.13.6",
       ivy"io.estatico::newtype:0.4.4",
+      ivy"com.nrinaudo::kantan.csv::0.7.0",
+      ivy"com.nrinaudo::kantan.csv-generic::0.7.0",
       ivy"com.beachape::enumeratum:1.7.5"
   )
 }

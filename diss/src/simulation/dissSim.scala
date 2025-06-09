@@ -1,0 +1,15 @@
+import scala.util.Random
+import scala.collection.mutable.TreeMap
+import simulation.model.{Arcane, DropEvent}
+import simulation.model.LoidEidolonEvent
+import simulation.scenarios.LoidEidolonCasino
+import simulation.scenarios.TridolonHuntKeepAll
+import simulation.scenarios.TridolonHuntWithCasino
+import simulation.scenarios.LoidEidolonKeepAll
+
+object Diss extends App {
+  // LoidEidolonCasino(100000, 9).run()
+  TridolonHuntKeepAll(1000).run()
+  // TridolonHuntWithCasino(1000, 9).run()
+  // LoidEidolonKeepAll(200000).run()
+}
